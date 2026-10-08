@@ -41,7 +41,27 @@ forge build
 
 ## Deploy
 
-Compile and review the contract, configure your wallet and RPC endpoint securely, then deploy
-`LastBrainCell` with the intended initial holder address using your preferred Foundry deployment
-workflow. This repository intentionally contains no private keys, RPC credentials, or automated
-mainnet deployment script.
+Always rehearse on a testnet (e.g. Sepolia) before mainnet. Use a dedicated wallet and import its
+key into Foundry's encrypted keystore instead of putting it in a file or command line:
+
+```sh
+cast wallet import deployer --interactive
+```
+
+Dry run (local simulation, no transaction sent):
+
+```sh
+export INITIAL_HOLDER=0xYourAddress   # PowerShell: $env:INITIAL_HOLDER="0xYourAddress"
+forge script script/Deploy.s.sol:Deploy
+```
+
+Deploy and verify (requires an RPC URL and an Etherscan API key):
+
+```sh
+forge script script/Deploy.s.sol:Deploy \
+  --rpc-url <RPC_URL> --account deployer --broadcast \
+  --verify --etherscan-api-key <ETHERSCAN_API_KEY>
+```
+
+`INITIAL_HOLDER` receives the entire fixed supply; prefer a hardware wallet or multisig. This
+repository intentionally contains no private keys or RPC credentials.
