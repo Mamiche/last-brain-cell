@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">Last Brain Cell (BRAIN) logo</title>
+  <desc id="desc">A single glowing neuron cell inside a circular badge.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#2a1b5e"/>
+      <stop offset="1" stop-color="#0b0820"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4fd8"/>
+      <stop offset="1" stop-color="#37e6ff"/>
+    </linearGradient>
+    <radialGradient id="core" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#fff2fb"/>
+      <stop offset="0.45" stop-color="#ff7ae6"/>
+      <stop offset="1" stop-color="#b21fd0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="244" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="244" fill="none" stroke="url(#ring)" stroke-width="12"/>
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#37e6ff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="3 9"/>
+
+  <g stroke="#37e6ff" stroke-width="9" stroke-linecap="round" fill="none" filter="url(#glow)">
+    <path d="M256 236 C230 190 200 160 150 138"/>
+    <path d="M150 138 L118 150 M150 138 L142 104"/>
+    <path d="M256 236 C300 196 340 170 392 158"/>
+    <path d="M392 158 L420 176 M392 158 L398 124"/>
+    <path d="M238 270 C190 280 150 300 112 340"/>
+    <path d="M112 340 L90 312 M112 340 L82 352"/>
+    <path d="M274 270 C320 290 358 316 388 362"/>
+    <path d="M388 362 L418 354 M388 362 L378 396"/>
+    <path d="M256 290 C258 340 252 380 256 430"/>
+    <path d="M256 430 L232 420 M256 430 L280 420"/>
+  </g>
+
+  <g fill="#ff4fd8" filter="url(#glow)">
+    <circle cx="150" cy="138" r="9"/>
+    <circle cx="392" cy="158" r="9"/>
+    <circle cx="112" cy="340" r="9"/>
+    <circle cx="388" cy="362" r="9"/>
+    <circle cx="256" cy="430" r="9"/>
+  </g>
+
+  <circle cx="256" cy="256" r="70" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="70" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+  <circle cx="256" cy="256" r="26" fill="#3a0a4d"/>
+  <circle cx="247" cy="247" r="8" fill="#ffffff" fill-opacity="0.85"/>
+</svg>

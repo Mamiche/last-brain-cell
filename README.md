@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="Last Brain Cell logo" width="160">
+</p>
+
 # Last Brain Cell (BRAIN)
 
 An ERC-20 meme coin contract for EVM-compatible networks.
